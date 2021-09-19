@@ -1,5 +1,5 @@
-{:paths ["src/main" "resources"]
- :deps  {org.clojure/clojure       {:mvn/version "1.10.3"}
+{:paths ["src/main/clj" "resources"]
+ :deps  {org.clojure/clojure       {:mvn/version "1.11.0-alpha1"}
          eu.mihosoft.vrl.jcsg/jcsg {:mvn/version "0.5.7"}
          eu.mihosoft.vcsg/vcsg     {:mvn/version "0.7.4"}
          cljfx/cljfx               {:mvn/version "1.7.14"}}
