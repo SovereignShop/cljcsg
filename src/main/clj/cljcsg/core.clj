@@ -57,6 +57,20 @@
                         (comp (map #(.-vertices %)) cat (map #(.-pos %)))
                         (.getPolygons shape))))
 
+(defn extrude-z
+  [z shape]
+  (Extrude/points (Vector3d/xyz 0 0 z)
+                  (into []
+                        (comp (map #(.-vertices %)) cat (map #(.-pos %)))
+                        (.getPolygons shape))))
+
+(defn rotate-extrude
+  ([r angle shape]
+   (r angle shape 10))
+  ([r angle shape n-steps]
+   (let [pts (for [x (range n-steps)]
+               (let [d (/ angle n-steps)]
+                 (Vector3d/xyz (* r (Math/cos d)) 0 (* r (Math/sin d)))))])))
 
 ;; Output
 
@@ -65,7 +79,7 @@
 
 (comment
   (->> (extrude [0 0 5]
-                (square 5 5))
+                (square 6 6))
        (->stl-string)
        (spit "sample.stl"))
 

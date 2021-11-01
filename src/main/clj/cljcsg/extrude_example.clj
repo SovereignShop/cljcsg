@@ -3,8 +3,7 @@
    [java.util ArrayList]
    [eu.mihosoft.vvecmath Vector3d Transform]
    [eu.mihosoft.jcsg PropertyStorage Cube Extrude Polygon]
-   [eu.mihosoft.jcsg.ext.quickhull3d
-    Point3d HullUtil]
+   [eu.mihosoft.jcsg.ext.quickhull3d Point3d HullUtil]
    [java.nio.file Paths]
    [eu.mihosoft.jcsg FileUtil]))
 
